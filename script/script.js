@@ -27,8 +27,8 @@ window.onload = function() {
         let qtdTotalRefriAgua = refriPP(duracao) * qtdAdultos + (carnePP(duracao) / 2 * qtdCriancas);
 
         resultado.innerHTML = `<p> ${qtdTotalCarne / 1000}kg de carne </p>`
-        resultado.innerHTML += `<p> ${qtdTotalCerveja / 1000}l de cerveja </p>`
-        resultado.innerHTML += `<p> ${qtdTotalRefriAgua / 1000}l de refri e água </p>`
+        resultado.innerHTML += `<p> ${Math.ceil(qtdTotalCerveja / 355)} Latas de cerveja </p>`
+        resultado.innerHTML += `<p> ${Math.ceil(qtdTotalRefriAgua / 2000)} Garrafas de refri e água </p>`
 
         console.log(qtdTotalCarne + "gr de carne", qtdTotalCerveja + "ml de cerveja", qtdTotalRefriAgua + "ml de refrigerante e agua");
 

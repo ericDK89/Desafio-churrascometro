@@ -2,21 +2,22 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-div {
-    width: 400px;
-    height: 250px;
-    background-color: aquamarine;
-    border-radius: 5px;
-    border: 1px solid aquamarine;
+#container {
+    max-width: 300px;
+    background-color: aliceblue;
+    border-radius: 10px;
     margin: auto;
-    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 0;
 }
 
 input {
-    border: none;
-    border-radius: 5px;
     box-sizing: border-box;
-    width: 90%;
-    padding: 10px;
+    width: 100%;
     margin-bottom: 10px;
+    padding: 5px;
+    display: block;
 }

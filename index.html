@@ -19,16 +19,17 @@
 
 <body>
 
-    <div>
+    <div id="container">
 
-        <h1>Churrascometro</h1>
-        <input type="number" name="numero_adultos" id="n_a" placeholder="Quantidade de adultos"><br>
-        <input type="number" name="numero_criancas" id="n_c" placeholder="Quantidade de crianças"><br>
-        <input type="number" name="duracao" id="d" placeholder="Duração do churrasco">
-        <button>Calcular</button>
+        <h1>Churrascômetro</h1>
+        <input id="adultos" name="adultos" type="number" placeholder="Quantidade de adultos">
+        <input id="criancas" name="criancas" type="number" placeholder="Quantidade de crianças">
+        <input type="number" name="duracao" id="duracao" placeholder="Duração (h)">
+        <button onclick="calcular()">Calcular</button>
+
+        <div id="resultado"></div>
 
     </div>
-
 </body>
 
 </html>

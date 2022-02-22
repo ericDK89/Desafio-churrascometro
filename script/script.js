@@ -6,6 +6,8 @@
 
 window.onload = function() {
 
+    // window.onload foi necessario para fazer os dados sairem de null
+
     let inputAdultos = document.getElementById("adultos")
     let inputCriancas = document.getElementById("criancas")
     let inputDuracao = document.getElementById("duracao")
@@ -18,18 +20,45 @@ window.onload = function() {
 
         let qtdAdultos = inputAdultos.value;
         let qtdCriancas = inputCriancas.value;
+        let duracao = inputDuracao.value
 
-        let qtdTotalCarne = carnePP * qtdAdultos + (carnePP / 2 * qtdCriancas);
+        let qtdTotalCarne = carnePP(duracao) * qtdAdultos + (carnePP(duracao) / 2 * qtdCriancas);
+        let qtdTotalCerveja = cervejaPP(duracao) * qtdAdultos;
+        let qtdTotalRefriAgua = refriPP(duracao) * qtdAdultos + (carnePP(duracao) / 2 * qtdCriancas);
 
-        console.log(qtdTotalCarne);
+        resultado.innerHTML = `<p> ${qtdTotalCarne} gr de carne </p>`
+        resultado.innerHTML += `<p> ${qtdTotalCerveja} ml de cerveja </p>`
+        resultado.innerHTML += `<p> ${qtdTotalRefriAgua} ml de refri e água </p>`
+
+        console.log(qtdTotalCarne + "gr de carne", qtdTotalCerveja + "ml de cerveja", qtdTotalRefriAgua + "ml de refrigerante e agua");
 
     }
+
+    // PP = Por pessoa
 
     function carnePP(duracao) {
         if (duracao >= 6) {
             return 650;
         } else {
             return 400;
+        }
+
+    }
+
+    function cervejaPP(duracao) {
+        if (duracao >= 6) {
+            return 2000;
+        } else {
+            return 1200;
+        }
+
+    }
+
+    function refriPP(duracao) {
+        if (duracao >= 6) {
+            return 1500;
+        } else {
+            return 1000;
         }
 
     }

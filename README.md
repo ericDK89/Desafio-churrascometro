@@ -10,3 +10,6 @@ Regra dos valores:
 //Refrigerante/agua - 1000 ml por pessoa + 6 horas - 1500 ml
 
 //Crianças valem por 0,5
+
+
+Foi necessario utilizar uma funcao window.onload pois todas as variaves estavam dando como Null. 

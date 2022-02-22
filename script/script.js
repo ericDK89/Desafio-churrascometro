@@ -4,8 +4,6 @@
 
 //Crianças valem por 0,5
 
-
-
 window.onload = function() {
 
     let inputAdultos = document.getElementById("adultos")
@@ -21,9 +19,19 @@ window.onload = function() {
         let qtdAdultos = inputAdultos.value;
         let qtdCriancas = inputCriancas.value;
 
-        let qtdTotalCarne = 400 * qtdAdultos + (400 / 2 * qtdCriancas);
+        let qtdTotalCarne = carnePP * qtdAdultos + (carnePP / 2 * qtdCriancas);
 
         console.log(qtdTotalCarne);
+
+    }
+
+    function carnePP(duracao) {
+        if (duracao >= 6) {
+            return 650;
+        } else {
+            return 400;
+        }
+
     }
 
 }

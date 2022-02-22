@@ -2,10 +2,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    background-color: black;
-}
-
 #container {
     max-width: 300px;
     background-color: aliceblue;
